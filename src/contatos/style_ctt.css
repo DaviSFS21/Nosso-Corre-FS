@@ -80,7 +80,6 @@ nav .drop_1 ul {
   position: absolute;
   top: 100%;
   background: var(--color-black);
-  border-bottom: 3px solid var(--color-primary-2);
   margin-top: -5px;
 }
 nav li ul {
@@ -116,7 +115,6 @@ nav .drop_1 i a {
 }
 nav li li a {
   float: inline-start;
-  color: var(--color-black-2);
   display: block;
   padding: 8px 10px;
   border-radius: 3px;

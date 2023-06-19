@@ -43,9 +43,9 @@ session_start();
         <!-- li para acesso da tela produtos -->
         <li>
           <a href="../prod/index.php">Gêneros</a>
-          <ul class="drop" style="margin-left: 40px;">
+          <ul class="drop" style="margin-left: 80px;">
             <!-- li do dropdown para acessar as cetegorias de produtos -->
-            <li class="scroll">
+            <li class="scroll" style="margin-left: -30px;">
               <ul class="mega-col" style="margin-right: 20px ;">
                 <li><a href="../prod/index.php?categ=samba">Samba</a></li>
                 <li><a href="../prod/index.php?categ=mpb">MPB</a></li>
@@ -120,7 +120,7 @@ session_start();
     <a href="#home" id="NUMBER"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
       </svg></a>
-    <br><br><br>
+    <br><br><br><br>
     <!-- Div para englobar a primeira section por completo -->
     <div class="container-fluid text-center">
       <!-- Div com a class jumbotron irá ajudar na organização do site  -->
@@ -144,7 +144,7 @@ session_start();
           <!-- Div do card do produto -->
           <div class="card" style="width: 18rem;">
             <!-- Imagem do produto -->
-            <img src="../assets/images/cama nova 2.jpg" class="card-img-top" alt="...">
+            <img src="../assets/images/gusttavolima.png" class="card-img-top" alt="...">
             <!-- Div do corpo do card -->
             <div class="card-body">
               <!-- Nome do produto -->
@@ -162,7 +162,7 @@ session_start();
           <!-- Div do card do produto -->
           <div class="card" style="width: 18rem;">
             <!-- Imagem do produto -->
-            <img src="../assets/images/mesa nova.jpg" class="card-img-top" alt="...">
+            <img src="../assets/images/rock.jpg" class="card-img-top" alt="...">
             <!-- Div do corpo do card -->
             <div class="card-body">
               <!-- Nome do produto -->
@@ -180,7 +180,7 @@ session_start();
           <!-- Div do card do produto -->
           <div class="card" style="width: 18rem;">
             <!-- Imagem do produto -->
-            <img src="../assets/images/toalha nova.jpg" class="card-img-top" alt="...">
+            <img src="../assets/images/samba.jpg" class="card-img-top" alt="...">
             <!-- Div do corpo do card -->
             <div class="card-body">
               <!-- Nome do produto -->
@@ -215,7 +215,7 @@ session_start();
           <!-- Div do card do produto -->
           <div class="card" style="width: 18rem;">
             <!-- Imagem do produto -->
-            <img src="../assets/images/colheres novas.jpg" class="card-img-top" alt="...">
+            <img src="../assets/images/elvis.jpg" class="card-img-top" alt="...">
             <!-- Div do corpo do card -->
             <div class="card-body">
               <!-- Nome do produto -->
@@ -233,7 +233,7 @@ session_start();
           <!-- Div do card do produto -->
           <div class="card" style="width: 18rem;">
             <!-- Imagem do produto -->
-            <img src="../assets/images/panela nova.jpg" class="card-img-top" alt="...">
+            <img src="../assets/images/forró.jpg" class="card-img-top" alt="...">
             <!-- Div do corpo do card -->
             <div class="card-body">
               <!-- Nome do produto -->
@@ -251,7 +251,7 @@ session_start();
           <!-- Div do card do produto -->
           <div class="card" style="width: 18rem;">
             <!-- Imagem do produto -->
-            <img src="../assets/images/cadeira nova.jpg" class="card-img-top" alt="...">
+            <img src="../assets/images/piseiro.png" class="card-img-top" alt="...">
             <!-- Div do corpo do card -->
             <div class="card-body">
               <!-- Nome do produto -->

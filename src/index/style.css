@@ -157,9 +157,6 @@ footer {
 footer a {
   color: var(--color-green);
 }
-footer a:hover {
-  color: var(--color-white-2);
-}
 .card button a,
 .stick {
   color: var(--color-black);

@@ -124,7 +124,6 @@ nav .drop_1 i a {
 }
 nav li li a {
   float: inline-start;
-  color: var(--color-black-2);
   display: block;
   padding: 8px 10px;
   border-radius: 3px;

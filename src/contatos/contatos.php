@@ -44,7 +44,7 @@ session_start();
           <a href="../prod/index.php">Gêneros</a>
           <ul class="drop" style="margin-left: 40px;">
             <!-- li do dropdown para acessar as cetegorias de produtos -->
-            <li class="scroll">
+            <li class="scroll" style="margin-left: -30px">
               <ul class="mega-col" style="margin-right: 20px ;">
                 <li><a href="../prod/index.php?categ=samba">Samba</a></li>
                 <li><a href="../prod/index.php?categ=mpb">MPB</a></li>
