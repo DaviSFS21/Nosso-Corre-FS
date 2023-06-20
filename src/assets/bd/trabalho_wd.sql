@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2022 at 01:34 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Tempo de geração: 20-Jun-2023 às 02:12
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,46 +18,51 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nosso_corre`
+-- Banco de dados: `trabalho_wd`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `produto`
+-- Estrutura da tabela `produto`
 --
 
 CREATE TABLE `produto` (
   `cod_som` int(11) NOT NULL,
   `nome_som` varchar(120) NOT NULL,
-  `desc_som` varchar(450) NOT NULL,
   `artista` varchar(20) NOT NULL,
-  `categoria` varchar(16) NOT NULL,
+  `categoria` varchar(16) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `produto`
+-- Extraindo dados da tabela `produto`
 --
 
-INSERT INTO `produto` (`cod_som`, `nome_som`, `desc_som`, `artista`, `categoria`);
-
--- --------------------------------------------------------
-
---
--- Indexes for dumped tables
---
+INSERT INTO `produto` (`cod_som`, `nome_som`, `artista`, `categoria`) VALUES
+(1, 'Borboletas', 'Vitor & Leo', 'sertanejo'),
+(2, 'Pais e Filhos', 'Legião Urbana', 'mpb'),
+(3, 'Asa Branca', 'Luiz Gonzaga', 'forro');
 
 --
--- Indexes for table `produto`
+-- Índices para tabelas despejadas
 --
-ALTER TABLE `musica`
+
+--
+-- Índices para tabela `produto`
+--
+ALTER TABLE `produto`
   ADD PRIMARY KEY (`cod_som`);
 
 --
--- AUTO_INCREMENT for table `produto`
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `cod_som` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `cod_som` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
