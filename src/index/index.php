@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -68,6 +65,9 @@ session_start();
           </ul>
         </li>
         <!-- li para acessar a página de contatos da empresa -->
+        <li class="drop_1">
+          <a href="../admin/index.php">Admin</a>
+        </li>
         <li class="drop_1">
           <a href="../contatos/contatos.php">Contatos</a>
         </li>
@@ -283,5 +283,4 @@ session_start();
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
   </script>
 </body>
-
 </html>

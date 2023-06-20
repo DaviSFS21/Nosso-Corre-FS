@@ -1,25 +1,3 @@
-<?php 
-session_start();
-
-/* A sequência irá verificar se há uma sessão ativa no dispositivo, caso contrário levará o usuário para a página de login. 
-Logo após o código irá verificar se a conta da sessão possui privilégios de administrador, caso contrário irá levar para a página inicial. */
-if(isset($_SESSION['nome'])){
-    if($_SESSION['verif_admin'] == 0){
-    ?>
-    <script>
-        alert("Você não deveria estar aqui...");
-        window.location.replace("../index/index.php");
-    </script>
-    <?php
-    }
-}else{
-    ?>
-    <script>
-        window.location.replace("../login/index.php");
-    </script>
-    <?php
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -44,7 +22,7 @@ if(isset($_SESSION['nome'])){
     <!-- Nav da parte administrativa -->
     <div id="header_1">
         <div class="logo_1">
-            <a href="./index.php">Comercial Pai & Filhos</a>
+            <a href="./index.php">Nosso Corre</a>
         </div>
         <nav style="width: 891px; padding-top: 5px;">
             <ul style="float: right; margin-right: 25px">
@@ -58,7 +36,7 @@ if(isset($_SESSION['nome'])){
                 </li>
                 <li class="drop_2">
                     <!-- Mostrando o nome do usuário no <header> com $_SESSION. -->
-                    <a href="../user/index.php">Olá, <?php echo $_SESSION['nome']; ?> </a>
+                    <a href="../user/index.php">Olá!</a>
                     <ul class="drop" style="width: 40%; margin-left: 430px;">
                         <li class="scroll">
                             <ul class="mega-col">
@@ -123,15 +101,14 @@ if(isset($_SESSION['nome'])){
             }
             echo '
                     <div class="card" style="width: 18rem;">
-                        <img src="'.$vetor_prod[4].'" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text">'.$vetor_prod[1].'</p>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">'.$vetor_prod[3].'</p>
+                            <p class="card-text">'.$vetor_prod[2].'</p>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">R$'.$vetor_prod[6].'</p>
+                            <p class="card-text">'.$vetor_prod[3].'</p>
                         </div>
                         <button type="button" class="btn btn-success">
                             <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>

@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -66,7 +63,10 @@ session_start();
             </li>
           </ul>
         </li>
-        <!-- li para acessar a página de contatos da empresa -->
+        <!-- li para acessar a página de contatos da empresa -->  
+        <li class="drop_1">
+          <a href="../admin/index.php">Admin</a>
+        </li>
         <li class="drop_1">
           <a href="#home">Contatos</a>
         </li>
@@ -157,5 +157,4 @@ session_start();
   <script src="./js/main-ctt.js"></script>
   <script src="./js/rating.js"></script>
 </body>
-
 </html>

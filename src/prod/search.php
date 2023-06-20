@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 require("../assets/bd/connect.php");
 ?>
 <!DOCTYPE html>
@@ -99,7 +97,7 @@ require("../assets/bd/connect.php");
         echo "<h2 class='text-center'>Resultados da pesquisa '$search'</h2><hr>";
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
-        $pesquisar_prod = "SELECT * FROM `produto` WHERE `nome_prod` LIKE '%$search%'";
+        $pesquisar_prod = "SELECT * FROM `produto` WHERE `nome_som` LIKE '%$search%'";
 
         //Executando a SQL e armazenando o resultado em uma variavel
         $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
@@ -136,19 +134,21 @@ require("../assets/bd/connect.php");
                         <div class="col-3 offset-sm-2">';
                 }
                 echo '
-                            <div class="card" style="width: 18rem;">
-                                <img src="' . $vetor_prod[4] . '" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">' . $vetor_prod[1] . '</p>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">' . $vetor_prod[3] . '</p>
-                                </div>
-                                <button type="button" class="btn btn-outline-success">
-                                    <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
-                                </button>
-                            </div>
-                        </div>';
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[1].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[2].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[3].'</p>
+                        </div>
+                        <button type="button" class="btn btn-success">
+                            <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                        </button>
+                    </div>
+                </div>';
                 if ($col == 3) {
                     echo '
                     </div>
@@ -159,7 +159,7 @@ require("../assets/bd/connect.php");
                 }
             }
         } else {
-            echo "<h2 class='text-center'>Nenhum produto foi encontrado...</h2>";
+            echo "<h2 class='text-center'>Nenhuma música foi encontrada...</h2>";
         }
     }
     ?>

@@ -50,14 +50,14 @@ INSERT INTO `produto` (`cod_som`, `nome_som`, `desc_som`, `artista`, `categoria`
 --
 -- Indexes for table `produto`
 --
-ALTER TABLE `produto`
-  ADD PRIMARY KEY (`cod_prod`);
+ALTER TABLE `musica`
+  ADD PRIMARY KEY (`cod_som`);
 
 --
 -- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `cod_prod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `cod_som` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -7,4 +7,4 @@ if(mysqli_connect_errno())
     echo "falha ao conectar: ". mysqli_connect_error(); die();
 }
 
-mysqli_select_db($conexao,"pai_e_filhos");
+mysqli_select_db($conexao,"trabalho_wd");

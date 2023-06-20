@@ -67,6 +67,9 @@
                 <li class="drop_1">
                     <a href="../contatos/contatos.php">Contatos</a>
                 </li>
+                <li class="drop_1">
+                    <a href="../admin/index.php">Admin</a>
+                </li>
                 <!-- form do search para conseguir pesquisar os produtos de forma automática -->
                 <form action="../prod/search.php" method="GET" class="d-flex" role="search" style="padding-top: 27px; padding-left: 45px;">
                     <!-- Input para fazer a pesquisa -->
@@ -94,7 +97,7 @@
         require("../assets/bd/connect.php");
 
         /* Procurando produtos com a categoria específica. */
-        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'travesseiros'";
+        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'samba'";
         $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
         $numero_resultado = mysqli_num_rows($resultado_prod);
 
@@ -102,7 +105,7 @@
         if ($numero_resultado != 0) {
             echo '
         <hr>
-        <h2 class="text-center">Travesseiros</h2>';
+        <h2 class="text-center">Samba</h2>';
 
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
@@ -132,22 +135,21 @@
                       <div class="col-3 offset-sm-2">';
                 }
                 echo '
-                            <div class="card" style="width: 18rem;">
-                                <img src="' . $vetor_prod[4] . '" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">' . $vetor_prod[1] . '</p>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">' . $vetor_prod[3] . '</p>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">R$' . $vetor_prod[6] . '</p>
-                                </div>
-                                <button type="button" class="btn btn-outline-success">
-                                    <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
-                                </button>
-                            </div>
-                        </div>';
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[1].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[2].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[3].'</p>
+                        </div>
+                        <button type="button" class="btn btn-success">
+                            <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                        </button>
+                    </div>
+                </div>';
                 if ($col == 3) {
                     echo '
                     </div>
@@ -162,7 +164,7 @@
         $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
-        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'edredons'";
+        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'mpb'";
 
         //Executando a SQL e armazenando o resultado em uma variavel
         $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
@@ -173,7 +175,7 @@
         if ($numero_resultado != 0) {
             echo '
         <hr>
-        <h2 class="text-center">Edredons</h2>';
+        <h2 class="text-center">MPB</h2>';
 
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
@@ -203,22 +205,21 @@
                         <div class="col-3 offset-sm-2">';
                 }
                 echo '
-                            <div class="card" style="width: 18rem;">
-                                <img src="' . $vetor_prod[4] . '" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">' . $vetor_prod[1] . '</p>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">' . $vetor_prod[3] . '</p>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">R$' . $vetor_prod[6] . '</p>
-                                </div>
-                                <button type="button" class="btn btn-outline-success">
-                                    <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
-                                </button>
-                            </div>
-                        </div>';
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[1].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[2].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[3].'</p>
+                        </div>
+                        <button type="button" class="btn btn-success">
+                            <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                        </button>
+                    </div>
+                </div>';
                 if ($col == 3) {
                     echo '
                     </div>
@@ -233,7 +234,7 @@
         $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
-        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'lencois'";
+        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'sertanejo'";
 
         //Executando a SQL e armazenando o resultado em uma variavel
         $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
@@ -244,7 +245,7 @@
         if ($numero_resultado != 0) {
             echo '
         <hr>
-        <h2 class="text-center">Lençóis</h2>';
+        <h2 class="text-center">Sertanejo</h2>';
 
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
@@ -274,22 +275,21 @@
                         <div class="col-3 offset-sm-2">';
                 }
                 echo '
-                            <div class="card" style="width: 18rem;">
-                                <img src="' . $vetor_prod[4] . '" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">' . $vetor_prod[1] . '</p>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">' . $vetor_prod[3] . '</p>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">R$' . $vetor_prod[6] . '</p>
-                                </div>
-                                <button type="button" class="btn btn-outline-success">
-                                    <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
-                                </button>
-                            </div>
-                        </div>';
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[1].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[2].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[3].'</p>
+                        </div>
+                        <button type="button" class="btn btn-success">
+                            <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                        </button>
+                    </div>
+                </div>';
                 if ($col == 3) {
                     echo '
                     </div>
@@ -304,7 +304,7 @@
         $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
-        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'cadeiras'";
+        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'rock'";
 
         //Executando a SQL e armazenando o resultado em uma variavel
         $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
@@ -315,7 +315,7 @@
         if ($numero_resultado != 0) {
             echo '
         <hr>
-        <h2 class="text-center">Cadeiras</h2>';
+        <h2 class="text-center">Rock</h2>';
 
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
@@ -345,22 +345,21 @@
                         <div class="col-3 offset-sm-2">';
                 }
                 echo '
-                            <div class="card" style="width: 18rem;">
-                                <img src="' . $vetor_prod[4] . '" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">' . $vetor_prod[1] . '</p>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">' . $vetor_prod[3] . '</p>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">R$' . $vetor_prod[6] . '</p>
-                                </div>
-                                <button type="button" class="btn btn-outline-success">
-                                    <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
-                                </button>
-                            </div>
-                        </div>';
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[1].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[2].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[3].'</p>
+                        </div>
+                        <button type="button" class="btn btn-success">
+                            <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                        </button>
+                    </div>
+                </div>';
                 if ($col == 3) {
                     echo '
                     </div>
@@ -375,7 +374,7 @@
         $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
-        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'plasticos'";
+        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'funk'";
 
         //Executando a SQL e armazenando o resultado em uma variavel
         $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
@@ -386,7 +385,7 @@
         if ($numero_resultado != 0) {
             echo '
         <hr>
-        <h2 class="text-center">Plásticos</h2>';
+        <h2 class="text-center">Funk</h2>';
 
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
@@ -416,22 +415,21 @@
                       <div class="col-3 offset-sm-2">';
                 }
                 echo '
-                          <div class="card" style="width: 18rem;">
-                              <img src="' . $vetor_prod[4] . '" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                  <p class="card-text">' . $vetor_prod[1] . '</p>
-                              </div>
-                              <div class="card-body">
-                                  <p class="card-text">' . $vetor_prod[3] . '</p>
-                              </div>
-                              <div class="card-body">
-                                  <p class="card-text">R$' . $vetor_prod[6] . '</p>
-                              </div>
-                              <button type="button" class="btn btn-outline-success">
-                                  <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
-                              </button>
-                          </div>
-                      </div>';
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[1].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[2].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[3].'</p>
+                        </div>
+                        <button type="button" class="btn btn-success">
+                            <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                        </button>
+                    </div>
+                </div>';
                 if ($col == 3) {
                     echo '
                   </div>
@@ -446,7 +444,7 @@
         $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
-        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'aluminios'";
+        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'bossa'";
 
         //Executando a SQL e armazenando o resultado em uma variavel
         $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
@@ -457,7 +455,7 @@
         if ($numero_resultado != 0) {
             echo '
         <hr>
-        <h2 class="text-center">Alumínios</h2>';
+        <h2 class="text-center">Bossa-Nova</h2>';
 
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
@@ -487,22 +485,21 @@
                       <div class="col-3 offset-sm-2">';
                 }
                 echo '
-                          <div class="card" style="width: 18rem;">
-                              <img src="' . $vetor_prod[4] . '" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                  <p class="card-text">' . $vetor_prod[1] . '</p>
-                              </div>
-                              <div class="card-body">
-                                  <p class="card-text">' . $vetor_prod[3] . '</p>
-                              </div>
-                              <div class="card-body">
-                                  <p class="card-text">R$' . $vetor_prod[6] . '</p>
-                              </div>
-                              <button type="button" class="btn btn-outline-success">
-                                  <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
-                              </button>
-                          </div>
-                      </div>';
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[1].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[2].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[3].'</p>
+                        </div>
+                        <button type="button" class="btn btn-success">
+                            <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                        </button>
+                    </div>
+                </div>';
                 if ($col == 3) {
                     echo '
                   </div>
@@ -517,7 +514,7 @@
         $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
-        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'vidros'";
+        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'gospel'";
 
         //Executando a SQL e armazenando o resultado em uma variavel
         $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
@@ -528,7 +525,7 @@
         if ($numero_resultado != 0) {
             echo '
         <hr>
-        <h2 class="text-center">Vidros</h2>';
+        <h2 class="text-center">Gospel</h2>';
 
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
@@ -558,22 +555,21 @@
                       <div class="col-3 offset-sm-2">';
                 }
                 echo '
-                          <div class="card" style="width: 18rem;">
-                              <img src="' . $vetor_prod[4] . '" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                  <p class="card-text">' . $vetor_prod[1] . '</p>
-                              </div>
-                              <div class="card-body">
-                                  <p class="card-text">' . $vetor_prod[3] . '</p>
-                              </div>
-                              <div class="card-body">
-                                  <p class="card-text">R$' . $vetor_prod[6] . '</p>
-                              </div>
-                              <button type="button" class="btn btn-outline-success">
-                                  <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
-                              </button>
-                          </div>
-                      </div>';
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[1].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[2].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[3].'</p>
+                        </div>
+                        <button type="button" class="btn btn-success">
+                            <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                        </button>
+                    </div>
+                </div>';
                 if ($col == 3) {
                     echo '
                   </div>
@@ -588,7 +584,7 @@
         $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
-        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'eletros'";
+        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'indies'";
 
         //Executando a SQL e armazenando o resultado em uma variavel
         $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
@@ -599,7 +595,7 @@
         if ($numero_resultado != 0) {
             echo '
         <hr>
-        <h2 class="text-center">Eletrodomésticos</h2>';
+        <h2 class="text-center">Indies</h2>';
 
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
@@ -629,22 +625,21 @@
                       <div class="col-3 offset-sm-2">';
                 }
                 echo '
-                          <div class="card" style="width: 18rem;">
-                              <img src="' . $vetor_prod[4] . '" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                  <p class="card-text">' . $vetor_prod[1] . '</p>
-                              </div>
-                              <div class="card-body">
-                                  <p class="card-text">' . $vetor_prod[3] . '</p>
-                              </div>
-                              <div class="card-body">
-                                  <p class="card-text">R$' . $vetor_prod[6] . '</p>
-                              </div>
-                              <button type="button" class="btn btn-outline-success">
-                                  <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
-                              </button>
-                          </div>
-                      </div>';
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[1].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[2].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[3].'</p>
+                        </div>
+                        <button type="button" class="btn btn-success">
+                            <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                        </button>
+                    </div>
+                </div>';
                 if ($col == 3) {
                     echo '
                   </div>
@@ -659,7 +654,7 @@
         $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
-        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'escadas'";
+        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'forro'";
 
         //Executando a SQL e armazenando o resultado em uma variavel
         $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
@@ -670,7 +665,7 @@
         if ($numero_resultado != 0) {
             echo '
         <hr>
-        <h2 class="text-center">Escadas</h2>';
+        <h2 class="text-center">Forró</h2>';
 
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
@@ -700,22 +695,21 @@
                       <div class="col-3 offset-sm-2">';
                 }
                 echo '
-                          <div class="card" style="width: 18rem;">
-                              <img src="' . $vetor_prod[4] . '" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                  <p class="card-text">' . $vetor_prod[1] . '</p>
-                              </div>
-                              <div class="card-body">
-                                  <p class="card-text">' . $vetor_prod[3] . '</p>
-                              </div>
-                              <div class="card-body">
-                                  <p class="card-text">R$' . $vetor_prod[6] . '</p>
-                              </div>
-                              <button type="button" class="btn btn-outline-success">
-                                  <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
-                              </button>
-                          </div>
-                      </div>';
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[1].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[2].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[3].'</p>
+                        </div>
+                        <button type="button" class="btn btn-success">
+                            <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                        </button>
+                    </div>
+                </div>';
                 if ($col == 3) {
                     echo '
                   </div>
@@ -730,7 +724,7 @@
         $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
-        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'tapetes'";
+        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'rap'";
 
         //Executando a SQL e armazenando o resultado em uma variavel
         $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
@@ -741,7 +735,7 @@
         if ($numero_resultado != 0) {
             echo '
         <hr>
-        <h2 class="text-center">Tapetes</h2>';
+        <h2 class="text-center">Rap</h2>';
 
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
@@ -771,22 +765,21 @@
                       <div class="col-3 offset-sm-2">';
                 }
                 echo '
-                          <div class="card" style="width: 18rem;">
-                              <img src="' . $vetor_prod[4] . '" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                  <p class="card-text">' . $vetor_prod[1] . '</p>
-                              </div>
-                              <div class="card-body">
-                                  <p class="card-text">' . $vetor_prod[3] . '</p>
-                              </div>
-                              <div class="card-body">
-                                  <p class="card-text">R$' . $vetor_prod[6] . '</p>
-                              </div>
-                              <button type="button" class="btn btn-outline-success">
-                                  <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
-                              </button>
-                          </div>
-                      </div>';
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[1].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[2].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[3].'</p>
+                        </div>
+                        <button type="button" class="btn btn-success">
+                            <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                        </button>
+                    </div>
+                </div>';
                 if ($col == 3) {
                     echo '
                   </div>
@@ -801,7 +794,7 @@
         $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
-        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'panos'";
+        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'trap'";
 
         //Executando a SQL e armazenando o resultado em uma variavel
         $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
@@ -812,7 +805,7 @@
         if ($numero_resultado != 0) {
             echo '
         <hr>
-        <h2 class="text-center">Panos</h2>';
+        <h2 class="text-center">Trap</h2>';
 
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
@@ -842,22 +835,91 @@
                         <div class="col-3 offset-sm-2">';
                 }
                 echo '
-                            <div class="card" style="width: 18rem;">
-                                <img src="' . $vetor_prod[4] . '" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">' . $vetor_prod[1] . '</p>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">' . $vetor_prod[3] . '</p>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">R$' . $vetor_prod[6] . '</p>
-                                </div>
-                                <button type="button" class="btn btn-outline-success">
-                                    <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
-                                </button>
-                            </div>
-                        </div>';
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[1].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[2].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[3].'</p>
+                        </div>
+                        <button type="button" class="btn btn-success">
+                            <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                        </button>
+                    </div>
+                </div>';
+                if ($col == 3) {
+                    echo '
+                    </div>
+                </div>
+            </section>
+                      ';
+                    $col = 0;
+                }
+            }
+        }
+        
+        $col = 0;
+
+        //Gerando a SQL de PESQUISA das categorias existentes no BD
+        $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'piseiro'";
+
+        //Executando a SQL e armazenando o resultado em uma variavel
+        $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
+
+        //Obtendo o numero de linhas retornadas na pesquisa
+        $numero_resultado = mysqli_num_rows($resultado_prod);
+
+        if ($numero_resultado != 0) {
+            echo '
+        <hr>
+        <h2 class="text-center">Piseiro</h2>';
+
+            //Existe categorias cadastradas!
+            for ($i = 1; $i <= $numero_resultado; $i++) {
+                $vetor_prod = mysqli_fetch_array($resultado_prod);
+
+                $col += 1;
+
+                if ($col == 1) {
+                    echo '
+            <section id="col" style="margin-bottom: 50px;">
+                <div class="container-fluid text-center">
+                    <div class="text-success"></div>
+                    <div class="row">';
+                }
+
+                if ($col == 1) {
+                    echo '
+                        <div class="col-1 offset-sm-1">';
+                }
+                if ($col == 2) {
+                    echo '
+                        <div class="col-2 offset-md-3">';
+                }
+
+                if ($col == 3) {
+                    echo '
+                        <div class="col-3 offset-sm-2">';
+                }
+                echo '
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[1].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[2].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[3].'</p>
+                        </div>
+                        <button type="button" class="btn btn-success">
+                            <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                        </button>
+                    </div>
+                </div>';
                 if ($col == 3) {
                     echo '
                     </div>
@@ -914,22 +976,21 @@
                         <div class="col-3 offset-sm-2">';
                 }
                 echo '
-                            <div class="card" style="width: 18rem;">
-                                <img src="' . $vetor_prod[4] . '" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">' . $vetor_prod[1] . '</p>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">' . $vetor_prod[3] . '</p>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">R$' . $vetor_prod[6] . '</p>
-                                </div>
-                                <button type="button" class="btn btn-outline-success">
-                                    <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
-                                </button>
-                            </div>
-                        </div>';
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[1].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[2].'</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">'.$vetor_prod[3].'</p>
+                        </div>
+                        <button type="button" class="btn btn-success">
+                            <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                        </button>
+                    </div>
+                </div>';
                 if ($col == 3) {
                     echo '
                     </div>
